@@ -1,0 +1,449 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5AF14FCB-826B-44AF-9F68-39061CB5714A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>FlightBookingForms</RootNamespace>
+    <AssemblyName>FlightBookingForms</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.6.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\packages\BouncyCastle.1.8.6.1\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI2, Version=2.0.1.4, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.UI2.WinForms.2.0.1.4\lib\net40\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.2, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13.2\lib\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.1.0.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.OData.Edm, Version=7.8.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.OData.Edm.7.8.2\lib\net45\Microsoft.OData.Edm.dll</HintPath>
+    </Reference>
+    <Reference Include="PdfSharp, Version=1.50.5147.0, Culture=neutral, PublicKeyToken=f94615aa0424f9eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\PDFsharp.1.50.5147\lib\net20\PdfSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="PdfSharp.Charting, Version=1.50.5147.0, Culture=neutral, PublicKeyToken=f94615aa0424f9eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\PDFsharp.1.50.5147\lib\net20\PdfSharp.Charting.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.0\lib\netstandard2.0\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.3\lib\netstandard2.0\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.6.0\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encodings.Web, Version=4.0.4.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Encodings.Web.4.6.0\lib\netstandard2.0\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json, Version=4.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Json.4.6.0\lib\net461\System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.2\lib\netstandard2.0\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdminAirCP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminAirCP.Designer.cs">
+      <DependentUpon>AdminAirCP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminAirCPcraft.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminAirCPcraft.Designer.cs">
+      <DependentUpon>AdminAirCPcraft.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminAirCPCraftcreation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminAirCPCraftcreation.Designer.cs">
+      <DependentUpon>AdminAirCPCraftcreation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminAirCPCraftedition.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminAirCPCraftedition.Designer.cs">
+      <DependentUpon>AdminAirCPCraftedition.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminBookedTicket.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminBookedTicket.Designer.cs">
+      <DependentUpon>AdminBookedTicket.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminCaC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminCaC.Designer.cs">
+      <DependentUpon>AdminCaC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminAirCPcreation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminAirCPcreation.Designer.cs">
+      <DependentUpon>AdminAirCPcreation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminAirCPediting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminAirCPediting.Designer.cs">
+      <DependentUpon>AdminAirCPediting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminFlightPriceEditing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminFlightPriceEditing.Designer.cs">
+      <DependentUpon>AdminFlightPriceEditing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminFlightPriceCreation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminFlightPriceCreation.Designer.cs">
+      <DependentUpon>AdminFlightPriceCreation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminFlightEditing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminFlightEditing.Designer.cs">
+      <DependentUpon>AdminFlightEditing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminCCediting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminCCediting.Designer.cs">
+      <DependentUpon>AdminCCediting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminCCcreation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminCCcreation.Designer.cs">
+      <DependentUpon>AdminCCcreation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminCC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminCC.Designer.cs">
+      <DependentUpon>AdminCC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminFlight.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminFlight.Designer.cs">
+      <DependentUpon>AdminFlight.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminFlightPrice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminFlightPrice.Designer.cs">
+      <DependentUpon>AdminFlightPrice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminMenu.Designer.cs">
+      <DependentUpon>AdminMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPassengers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminPassengers.Designer.cs">
+      <DependentUpon>AdminPassengers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPayments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminPayments.Designer.cs">
+      <DependentUpon>AdminPayments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPaymentsReserv.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminPaymentsReserv.Designer.cs">
+      <DependentUpon>AdminPaymentsReserv.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPersonalArea.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminPersonalArea.Designer.cs">
+      <DependentUpon>AdminPersonalArea.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminRate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminRate.Designer.cs">
+      <DependentUpon>AdminRate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminRateEditing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminRateEditing.Designer.cs">
+      <DependentUpon>AdminRateEditing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminSeatNumber.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminSeatNumber.Designer.cs">
+      <DependentUpon>AdminSeatNumber.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminUsers.Designer.cs">
+      <DependentUpon>AdminUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminCaCCreation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminCaCCreation.Designer.cs">
+      <DependentUpon>AdminCaCCreation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminFlightCreations.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminFlightCreations.Designer.cs">
+      <DependentUpon>AdminFlightCreations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminUsersCreation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminUsersCreation.Designer.cs">
+      <DependentUpon>AdminUsersCreation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminCaCEditing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminCaCEditing.Designer.cs">
+      <DependentUpon>AdminCaCEditing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminUsersEditing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminUsersEditing.Designer.cs">
+      <DependentUpon>AdminUsersEditing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AirCraftCapacity.cs" />
+    <Compile Include="AirPorts.cs" />
+    <Compile Include="SeatNumber.cs" />
+    <Compile Include="FlightBookingDNB.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FlightBookingDNB.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PrimaryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrimaryForm.Designer.cs">
+      <DependentUpon>PrimaryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrimaryRegistration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrimaryRegistration.Designer.cs">
+      <DependentUpon>PrimaryRegistration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrimaryFormData.cs" />
+    <Compile Include="Rate.cs" />
+    <Compile Include="FlightSchedules.cs" />
+    <Compile Include="AirCrafts.cs" />
+    <Compile Include="Flight.cs" />
+    <Compile Include="City.cs" />
+    <Compile Include="FSP.cs" />
+    <Compile Include="Restriction.cs" />
+    <Compile Include="StartForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StartForm.Designer.cs">
+      <DependentUpon>StartForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Country.cs" />
+    <Compile Include="Login.cs" />
+    <Compile Include="Ticket.cs" />
+    <Compile Include="User.cs" />
+    <EmbeddedResource Include="AdminAirCP.resx">
+      <DependentUpon>AdminAirCP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminAirCPcraft.resx">
+      <DependentUpon>AdminAirCPcraft.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminAirCPCraftcreation.resx">
+      <DependentUpon>AdminAirCPCraftcreation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminAirCPCraftedition.resx">
+      <DependentUpon>AdminAirCPCraftedition.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminBookedTicket.resx">
+      <DependentUpon>AdminBookedTicket.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminCaC.resx">
+      <DependentUpon>AdminCaC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminAirCPcreation.resx">
+      <DependentUpon>AdminAirCPcreation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminAirCPediting.resx">
+      <DependentUpon>AdminAirCPediting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminFlightPriceEditing.resx">
+      <DependentUpon>AdminFlightPriceEditing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminFlightPriceCreation.resx">
+      <DependentUpon>AdminFlightPriceCreation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminFlightEditing.resx">
+      <DependentUpon>AdminFlightEditing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminCCediting.resx">
+      <DependentUpon>AdminCCediting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminCCcreation.resx">
+      <DependentUpon>AdminCCcreation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminCC.resx">
+      <DependentUpon>AdminCC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminFlight.resx">
+      <DependentUpon>AdminFlight.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminFlightPrice.resx">
+      <DependentUpon>AdminFlightPrice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminMenu.resx">
+      <DependentUpon>AdminMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminPassengers.resx">
+      <DependentUpon>AdminPassengers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminPayments.resx">
+      <DependentUpon>AdminPayments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminPaymentsReserv.resx">
+      <DependentUpon>AdminPaymentsReserv.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminPersonalArea.resx">
+      <DependentUpon>AdminPersonalArea.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminRate.resx">
+      <DependentUpon>AdminRate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminRateEditing.resx">
+      <DependentUpon>AdminRateEditing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminSeatNumber.resx">
+      <DependentUpon>AdminSeatNumber.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminUsers.resx">
+      <DependentUpon>AdminUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminCaCCreation.resx">
+      <DependentUpon>AdminCaCCreation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminFlightCreations.resx">
+      <DependentUpon>AdminFlightCreations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminUsersCreation.resx">
+      <DependentUpon>AdminUsersCreation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminCaCEditing.resx">
+      <DependentUpon>AdminCaCEditing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminUsersEditing.resx">
+      <DependentUpon>AdminUsersEditing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrimaryForm.resx">
+      <DependentUpon>PrimaryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrimaryRegistration.resx">
+      <DependentUpon>PrimaryRegistration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StartForm.resx">
+      <DependentUpon>StartForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="FlightBookingDNB.xsc">
+      <DependentUpon>FlightBookingDNB.xsd</DependentUpon>
+    </None>
+    <None Include="FlightBookingDNB.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FlightBookingDNB.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="FlightBookingDNB.xss">
+      <DependentUpon>FlightBookingDNB.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
