@@ -41,6 +41,7 @@ namespace FlightBookingForms
             this.PictureLogin = new Guna.UI2.WinForms.Guna2PictureBox();
             this.ButtonLogin = new Guna.UI2.WinForms.Guna2Button();
             this.ButtonBackWards = new Guna.UI2.WinForms.Guna2Button();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.PictureLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -211,6 +212,15 @@ namespace FlightBookingForms
             this.ButtonBackWards.Text = "Назад";
             this.ButtonBackWards.Click += new System.EventHandler(this.ButtonBackWards_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(13, 224);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(99, 26);
+            this.label1.TabIndex = 18;
+            this.label1.Text = "логин: admin\r\nпароль: admin4ik\r\n";
+            // 
             // StartForm
             // 
             this.AcceptButton = this.ButtonLogin;
@@ -218,7 +228,8 @@ namespace FlightBookingForms
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(296, 451);
+            this.ClientSize = new System.Drawing.Size(306, 451);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.ButtonBackWards);
             this.Controls.Add(this.ButtonLogin);
             this.Controls.Add(this.pictureBox2);
@@ -241,6 +252,7 @@ namespace FlightBookingForms
             ((System.ComponentModel.ISupportInitialize)(this.PicturePassword)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureLogin)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -256,6 +268,7 @@ namespace FlightBookingForms
         private Guna.UI2.WinForms.Guna2TextBox PasswordField;
         private Guna.UI2.WinForms.Guna2TextBox LoginField;
         private Guna.UI2.WinForms.Guna2Button ButtonBackWards;
+        private System.Windows.Forms.Label label1;
     }
 }
 
